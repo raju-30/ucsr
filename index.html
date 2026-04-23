@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>UCSR VAULT</title>
+<meta charset="UTF-8">
+<title>UCSR VAULT</title>
 
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<main>
-  <h1>UCSR VAULT</h1>
+<h1>UCSR VAULT</h1>
 
-  <!-- Buttons -->
-  <div id="BtnContainer">
-    <span class="btn" onclick="filterSelection('certificates')">Certificates</span>
-     <span class="btn" onclick="filterSelection('ImpDocuments')">Imp Documents</span>
-     <span class="btn" onclick="filterSelection('Clg')">PDF</span>
-  </div>
-
-  <!-- Cards -->
-  <div class="container">
-
-    <div class="card filterDiv certificates">
-      <h2>Course Certificates</h2>
-      <a href="https://drive.google.com/drive/folders/1SHaSr5InSd2WrodKhUiGpnnb8M5WU6gQ?usp=drive_link" target="_blank">Open</a>
-    </div>
-    <div class="card filterDiv ImpDocuments">
-      <h2>Imp certificates</h2>
-      <a href="https://drive.google.com/drive/folders/1orpVHlqWhtlfesbyTg1HAoZhPEUbqAdF?usp=drive_link" target="_blank">Open</a>
-    </div>
-    <div class="card filterDiv Clg">
-      <h2>Clg</h2>
-      <a href="https://drive.google.com/drive/folders/1uPoee-oB-QZNPyNQBWP87of_qLUDo_z4?usp=drive_link" target="_blank">Open</a>
-    </div>
-
-
-  </div>
-  <!-- Password Popup -->
-<div id="passwordModal" class="modal">
-  <div class="modal-box">
-    <h3>This is locked!!<h3>
-    <p>Enter password</p>
-
-    <input type="password" id="passwordInput" placeholder="Password">
-
-    <div class="modal-actions">
-      <button onclick="checkPassword()">Unlock</button>
-      <button onclick="closeModal()">Cancel</button>
-    </div>
-
-    <p id="errorMsg"></p>
-  </div>
+<!-- FILTER BUTTONS -->
+<div id="BtnContainer">
+  <span class="btn" onclick="filterSelection('certificates')">Certificates</span>
+  <span class="btn" onclick="filterSelection('ImpDocuments')">Imp Documents</span>
+  <span class="btn" onclick="filterSelection('Clg')">PDF</span>
 </div>
-</main>
 
+<!-- MESSAGE (shown before click) -->
+<p id="emptyMsg"></p>
 
-<!-- JS File -->
+<!-- CARDS -->
+<div class="container">
+
+  <div class="card filterDiv certificates">
+    <div class="head">
+      Certificates <span>📂</span>
+    </div>
+    <div class="content">
+      Course Certificates
+      <br>
+      <a href="https://drive.google.com/drive/folders/1SHaSr5InSd2WrodKhUiGpnnb8M5WU6gQ" target="_blank">
+        <button class="button">Open</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="card filterDiv ImpDocuments">
+    <div class="head">
+      Important Docs <span>📄</span>
+    </div>
+    <div class="content">
+      Important Certificates
+      <br>
+      <a href="https://drive.google.com/drive/folders/1orpVHlqWhtlfesbyTg1HAoZhPEUbqAdF" target="_blank">
+        <button class="button">Open</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="card filterDiv Clg">
+    <div class="head">
+      PDFs <span>📁</span>
+    </div>
+    <div class="content">
+      College Files
+      <br>
+      <a href="https://drive.google.com/drive/folders/1uPoee-oB-QZNPyNQBWP87of_qLUDo_z4" target="_blank">
+        <button class="button">Open</button>
+      </a>
+    </div>
+  </div>
+
+</div>
+
 <script src="script.js"></script>
-
 </body>
 </html>
